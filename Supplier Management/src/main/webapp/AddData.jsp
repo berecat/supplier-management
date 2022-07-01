@@ -48,7 +48,7 @@ overflow-y: hidden;
         <div class="form-group row">
             <label for="inputEmail3" class="col-sm-2 col-form-label" style="left:3% ;">Email</label>
             <div class="col-sm-10">
-              <input type="email" name="email" class="form-control" id="inputEmail3" placeholder="Email" style="width:50%;" required>
+              <input type="email" name="email" class="form-control" id="inputEmail3" placeholder="example@gmail.com" style="width:50%;" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
             </div>
           </div>
           <div class="form-group row">
@@ -72,13 +72,14 @@ overflow-y: hidden;
           <div class="form-group row">
             <label for="inputEmail3" class="col-sm-2 col-form-label" style="left:3% ;">Quantity</label>
             <div class="col-sm-10">
-              <input type="number" name="quantity" class="form-control" id="inputEmail3" placeholder="Quantity" style="width:50%;"required>
+              <input type="number" name="quantity" class="form-control" id="inputEmail3" placeholder="Quantity" style="width:50%;"required min="0">
             </div>
           </div>
           <div class="form-group row">
             <label for="inputEmail3" class="col-sm-2 col-form-label" style="left:3% ;">Price(Rs.)</label>
             <div class="col-sm-10">
-              <input type="number" name="price" class="form-control" id="inputEmail3" placeholder="Price(Rs.)" style="width:50%;"required>
+              <input type="number" name="price" class="form-control" id="inputEmail3" placeholder="Price(Rs.)" style="width:50%;"required
+              step="any" min="0">
             </div>
           </div>
           <br><br>

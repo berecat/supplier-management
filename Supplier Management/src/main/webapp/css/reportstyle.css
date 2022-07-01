@@ -1,4 +1,4 @@
-* {
+@charset "ISO-8859-1";* {
 	box-sizing: border-box;
 }
 
@@ -9,6 +9,8 @@ html {
 body {
 	margin: 0px;
 	padding: 0px;
+	background-image: url("css/background.jpg");
+	
 }
 
 /* For mobile phones: */
@@ -100,7 +102,6 @@ body {
 	background-color: #24262b !important;
 	height: 150px;
 	width: 100%;
-	position: fixed;
 }
 
 .row::after {
@@ -134,7 +135,6 @@ header ul {
 	padding: 0;
 	overflow: hidden;
 	/*background-color: #333;*/
-	position:absolute;
 	top: 32%;
 }
 
@@ -217,8 +217,8 @@ header li a:hover {
 	position: fixed;
 	top: 0;
 	width: 100%;
-	z-index: 1;
 }
+
 
 /*----------marquee styles---------*/
 #H1 {
@@ -227,9 +227,8 @@ header li a:hover {
 	color: #141610;
 	font-family: sans-serif;
 	background-color: rgb(236, 229, 229);
-	margin-top: 0%;
-	width: 109%;
-	position: fixed;
+	margin-top:0%;
+	width: 100%;
 }
 
 body {
@@ -271,3 +270,5 @@ body {
 	cursor: pointer;
 	font-size: 20px;
 }
+
+

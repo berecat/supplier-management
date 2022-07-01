@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
     
-    <%@page import="sms.model.crud"%>
+<%@page import="sms.model.crud"%>
 <%@page import="sms.db.Supplier"%>
 <%@page import="java.util.ArrayList"%>
     
@@ -11,36 +11,15 @@
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 
+
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet"
 	href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
 
 
-<link rel="stylesheet"
-	href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
-<script
-	src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
-<script
-	src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-<script
-	src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
 
-
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<link
-	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
-	rel="stylesheet"
-	integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
-	crossorigin="anonymous">
-<script
-	src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
-	integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
-	crossorigin="anonymous"></script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 
 
 <style>
@@ -67,21 +46,9 @@
 				</ul>
 			</div>
 
-			<div class="col-6 nav nav-com">
-				<div class="wrap">
-					<div class="search">
-						<input type="text" class="searchTerm"
-							placeholder="What are you looking for?">
-						<button type="submit" class="searchButton">
-							<i class="fa fa-search"></i>
-						</button>
-					</div>
-				</div>
-			</div>
-
-
-
-			<div class="col-1 nav nav-com">
+		
+	
+			<div class="col-1 nav nav-com" style="margin-left: 45%">
 
 				<div class="admin-tag" data-toggle="tooltip" data-placement="top"
 					title="Admin Online">Admin</div>
@@ -104,7 +71,8 @@
 
 	<!----------------------------------- Body ----------------------------------->
 
-<table class="table table-dark table-bordered" style="margin-left: 0%;">
+
+<table class="table table-bordered table-dark" style="margin-left: 0%;">
 
 
 
@@ -179,10 +147,20 @@
 		
 				
 	</table>
-	<a href="Dashboard.jsp" class="btn btn-primary" style="width: 140px; margin-left: 2%;">
+	<a href="Dashboard.jsp" class="btn btn-primary" style="width: 160px; margin-left: 2%;">
 		Dashboard &nbsp<i class="fa fa-server"></i>
 	</a>
 
+<br><br><br><br><br><br><br><br><br><br><br><br>
+
+<footer class="footer">
+		<div class="container">
+			<div class="row">
+				Copyrights©
+				AUTOMART. All rights reserved
+			</div>
+		</div>
+	</footer>
 
 
 

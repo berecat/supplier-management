@@ -17,6 +17,9 @@ public class Supplier {
 	float SubAmount;
 	Date date;
 	Timestamp time;
+	float SubTotal;
+	int TotalQuantity;
+	int count;
 	
 	
 	//getters
@@ -66,7 +69,23 @@ public class Supplier {
 	}
 	
 	
+	public float getSubtotal() {
+		return SubTotal;
+	}
+	
+	public int getTotalQuantity() {
+		return  TotalQuantity;
+	}
+	
+	public int getCount() {
+		return count;
+	}
+	
+	
+	
 	//setters
+	
+
 	public void setSupplierID(int id) {
 		this.id=id;
 		
@@ -114,4 +133,18 @@ public class Supplier {
 		this.time=time;
 	}
 
+	public void setSubTotal(float subTotal) {
+		this.SubTotal=subTotal;
+	}
+	
+	public void setTotalQuantity(int TotalQuantitiy) {
+		this.TotalQuantity=TotalQuantitiy;
+	}
+	
+	public void setCount(int count) {
+		this.count=count;
+	}
+	
+	
+	
 }

@@ -7,6 +7,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+import com.mysql.cj.protocol.Resultset;
+
 import sms.db.Supplier;
 import sms.db.Provider;
 
@@ -256,8 +258,103 @@ public static ArrayList<Supplier> getAllDeletedRecords() throws SQLException
 	
 }
 	
+//to get total expenditure for the report
+
+	public static float getTotal() throws SQLException {
+		
+		Connection con =Provider.getMysqlConnection();
+		String sql ="select SUM(sub_amount) from supplier";
+		PreparedStatement pst = con.prepareStatement(sql);
+		
+		
+		ResultSet rs = pst.executeQuery();
+		float sum=0;
+		
+		while(rs.next()) {
+			
+			sum=rs.getFloat(1);
+		
+		
+			
+		}
+		
+		return sum;
+}
 	
+	//to get total days for the report
 	
+	public static int getTotDates() throws SQLException {
+		
+		Connection con =Provider.getMysqlConnection();
+		String sql ="SELECT DATEDIFF(NOW(),date)\r\n"
+				+ "from supplier\r\n"
+				+ "limit 1\r\n"
+				+ "";
+		PreparedStatement pst = con.prepareStatement(sql);
+		
+		ResultSet rs = pst.executeQuery();
+		
+		int count=0;
+		
+		while(rs.next()) {
+			
+			count =rs.getInt(1);
+			
+		}
+		
+		
+		
+		return count;
+		
+}
+	
+	//for item table in report
+	
+	public static ArrayList<Supplier> getItems() throws SQLException
+	{
+		ArrayList<Supplier> samp=new ArrayList<Supplier>();
+		samp.clear();
+		Connection con =Provider.getMysqlConnection();
+		String sql="select distinct supplier_item,sum(quantity),sum(sub_amount),count(supplier_item) \r\n"
+				+ "from supplier \r\n"
+				+ "group by supplier_item";
+		try {
+			
+			PreparedStatement pst= con.prepareStatement(sql);
+			
+			ResultSet rs=pst.executeQuery(sql);
+			while(rs.next()) {
+				Supplier s1= new Supplier();
+				s1.setItem(rs.getString("supplier_item"));
+				s1.setTotalQuantity(rs.getInt("sum(quantity)"));
+				s1.setSubTotal(rs.getFloat("sum(sub_amount)"));
+				s1.setCount(rs.getInt("count(supplier_item)"));
+				
+				samp.add(s1);
+		
+				
+			}
+			
+			
+			
+			
+		}
+		
+		catch(Exception e2) {
+			
+			e2.printStackTrace();
+		}
+		
+		finally {
+		    if (con != null)
+		      con.close();
+		  }
+		
+		return samp;
+		
+		
+		
+	}
 	
 
 

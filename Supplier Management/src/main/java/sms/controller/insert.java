@@ -41,7 +41,8 @@ public class insert extends HttpServlet {
 		int contact=Integer.parseInt(request.getParameter("contact"));
 		String item=request.getParameter("item");
 		int quantity=Integer.parseInt(request.getParameter("quantity"));
-		int price =Integer.parseInt(request.getParameter("price"));
+		float price =Float.parseFloat(request.getParameter("price"));
+		float subamount= quantity*price;
 		
 		Supplier s1=new Supplier();
 		s1.setSupplierName(suppliername);
@@ -52,6 +53,7 @@ public class insert extends HttpServlet {
 		s1.setItem(item);
 		s1.setQuantity(quantity);
 		s1.setPrice(price);
+		s1.setSubamount(subamount);  //last change 
 		
 		
 		boolean status = crud.insert(s1);

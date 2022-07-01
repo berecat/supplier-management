@@ -72,25 +72,14 @@
 			</div>
 			<div class="col-2 nav nav-com">
 				<ul>
-					<li class="li-com"><a href="#Home">Home</a></li>
+					<li class="li-com"><a href="http://localhost:8080/Automart/admin-pannel2.jsp">Home</a></li>
 				</ul>
 			</div>
 
-			<div class="col-6 nav nav-com">
-				<div class="wrap">
-					<div class="search">
-						<input type="text" class="searchTerm"
-							placeholder="What are you looking for?">
-						<button type="submit" class="searchButton">
-							<i class="fa fa-search"></i>
-						</button>
-					</div>
-				</div>
-			</div>
+		
+			
 
-
-
-			<div class="col-1 nav nav-com">
+			<div class="col-1 nav nav-com" style="margin-left: 45%">
 
 				<div class="admin-tag" data-toggle="tooltip" data-placement="top"
 					title="Admin Online">Admin</div>
@@ -310,9 +299,13 @@ iframe {
 		
 		
 	</table>
-	<button class="btn btn-warning" style="width: 96px; margin-left: 2%;">
-		Report &nbsp<i class="fa fa-server"></i>
-	</button>
+	
+	
+	<a href="Report.jsp" class="btn btn-warning" style="width: 100px; margin-left: 2%;">
+		Report &nbsp <i class="fa fa-server"></i>
+	</a>
+	
+	
 	<a href="DeletedRecords.jsp" class="btn btn-info" style="width: 180px; margin-left: 2%;">
 		Deleted Records &nbsp <i class="fa fa-recycle"></i>
 	</a>
